@@ -1,4 +1,8 @@
 // 手写Promise
+/* 实现功能：
+三种状态、executor执行器中的resolve,reject可以正常被调用、
+then方法、executor执行器中的抛异常
+*/
 function Promise(executor){
     this.status = 'pending'
     this.value = ''

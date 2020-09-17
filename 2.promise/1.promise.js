@@ -5,13 +5,26 @@
    executor函数，会立即执行，参数是：resolve函数 、reject函数
    每个promise实例都有一个then方法
 */
-// let Promise = require('./write/promise')
+let Promise = require('./write/2.多个then-promise')
 let promise = new Promise((resolve,reject) => {
     console.log(1)
     // resolve('success')   
     // throw new Error() // 抛出错误时，会走then方法的err  相当于reject(new Error())
+    setTimeout(()=> {
+        resolve('success')
+    },1000)
 })
 
+promise.then((val)=>{
+    console.log(val)
+},(err)=> {
+    console.log(err,'fail')
+})
+promise.then((val)=>{
+    console.log(val)
+},(err)=> {
+    console.log(err,'fail')
+})
 promise.then((val)=>{
     console.log(val)
 },(err)=> {
