@@ -9,12 +9,15 @@ function Animal(name){
     this.obj = {
         age: 18
     }
+    this.arr = [1,2]
 }
 Animal.prototype.address = {
     country: 'China'
 }
 let a1 = new Animal('猴子')
 let a2 = new Animal('小鸡')
+a1.arr.push(3)
+console.log(a2.arr)
 console.log(a1.obj === a2.obj) // false
 console.log(a1.address === a2.address) //true
 // 每个实例都有一个__proto__指向所属类的原型

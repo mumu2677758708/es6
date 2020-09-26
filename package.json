@@ -24,5 +24,8 @@
     "@babel/plugin-proposal-decorators": "^7.10.5",
     "@babel/preset-env": "^7.11.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "co": "^4.6.0",
+    "mz": "^2.7.0"
+  }
 }
